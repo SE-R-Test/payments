@@ -21,14 +21,14 @@ $app->get('/', function() use($app) {
    $app->render('index.twig');
 });
 
-$app->get('/login', function() use($app) {
-    $app->render('login.twig');
-})->name('login');
+$app->get('/register', function() use($app) {
+    $app->render('register.twig');
+})->name('register');
 
 $app->get('/invoices', function() use($app) {
     $app->render('invoices.twig');
 })->name('invoices');
 
-$app->post('/login', function() use($app) {
+$app->post('/register', function() use($app) {
     print_r($app->request());
-})->name('login.post');
+})->name('register.post');
