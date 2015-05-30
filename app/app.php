@@ -24,6 +24,11 @@ $app->get('/', function() use($app) {
 $app->get('/login', function() use($app) {
     $app->render('login.twig');
 })->name('login');
+
+$app->get('/invoices', function() use($app) {
+    $app->render('invoices.twig');
+})->name('invoices');
+
 $app->post('/login', function() use($app) {
     print_r($app->request());
 })->name('login.post');
