@@ -20,3 +20,10 @@ $view->parserExtensions = array(
 $app->get('/', function() use($app) {
    $app->render('index.twig');
 });
+
+$app->get('/login', function() use($app) {
+    $app->render('login.twig');
+})->name('login');
+$app->post('/login', function() use($app) {
+    print_r($app->request());
+})->name('login.post');
