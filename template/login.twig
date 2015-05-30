@@ -1,0 +1,32 @@
+{% extends '_base.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col s12 center">
+            <h1>Login</h1>
+        </div>
+    </div>
+<div class="row">
+    <div class="col s6 offset-s3 grid-example z-depth-1" style="padding-top: 10px;">
+
+        <form class="col s12" method="post" action="{{ urlFor('register.post') }}">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="username" type="text" class="validate">
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="password" type="text" class="validate">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 center">
+                    <button class="waves-effect waves-light btn" type="submit">Login</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+{% endblock %}
