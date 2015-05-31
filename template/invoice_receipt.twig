@@ -1,0 +1,17 @@
+{% extends '_base.twig' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col s12">
+            <h1>Payment Received!</h1>
+
+            <p>Your payment was received at {{ invoice.payment_date | date }}.</p>
+
+            <p>The payment was completed by <em>{{ charge.source.name }}</em> using the {{ charge.source.object }} ending {{ charge.source.last4 }}.</p>
+
+            <p>Thank you!</p>
+        </div>
+    </div>
+
+{% endblock %}

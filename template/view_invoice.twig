@@ -1,0 +1,29 @@
+{% extends '_base.twig' %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col s12">
+            <h1>Invoice - {{ invoice.title }}</h1>
+            <span>{{ invoice.status | title }}</span>
+            <p>{{ invoice.description }}</p>
+            <p>Issued On: {{ invoice.issue_date | date }}</p>
+
+            {#<p><a class="btn waves-effect" href="#">Pay now</a></p>#}
+
+            <form action="{{ urlFor('invoices.pay', { id: invoice.id }) }}" method="POST">
+              <script
+                src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="{{ stripe.publishable }}"
+                data-image="/square-image.png"
+                data-name="Invoice - {{ invoice.title }}"
+                data-description="{{ invoice.description }}"
+                data-currency="gbp"
+                data-amount="{{ invoice.amount }}">
+              </script>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
