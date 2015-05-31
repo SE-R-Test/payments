@@ -34,6 +34,13 @@ return array(
 
 Edit the config file with the necessary data, and save it as `config.php`.
 
+### Front end
+
+The JS and CSS is managed through [Bower](http://bower.io/). Once Bower is installed, just run `$ bower install`, to download
+
+- jQuery
+- Materialize CSS framework
+
 ## TODO
 
 - [x] Complete spec features
