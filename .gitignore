@@ -63,3 +63,5 @@ public/bower_components
 
 
 /app/config.php
+
+/node_modules/
