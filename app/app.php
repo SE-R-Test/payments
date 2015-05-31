@@ -62,7 +62,8 @@ $app->get('/', function() use($app) {
     } else {
         $app->redirect($app->urlFor('login'));
     }
-});
+
+})->name('home');
 
 //$app->get('/register', function() use($app) {
 //    $app->render('register.twig');
