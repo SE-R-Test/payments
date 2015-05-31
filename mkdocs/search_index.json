@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Invoices\n\n\nTo regenerate documentation, run \nmkdocs build\n. \nmkdocs\n can be installed using \n$ pip install mkdocs\n.\n\n\nConfiguration and Setup\n\n\nThere is a \nconfig.php.example\n file within the \napp\n folder, with the following contents:\n\n\n?php\n\nreturn array(\n    'database' =\n array(\n        'hostname' =\n '', // Database hostname\n        'username' =\n '', // Username\n        'password' =\n '', // Password\n        'dbname' =\n '', // Database name\n        'port' =\n '', // Port, 3306 by default\n    ),\n    'stripe' =\n array(\n        'test' =\n array(\n            'secret' =\n '',\n            'publishable' =\n ''\n        ),\n        'live' =\n array(\n            'secret' =\n '',\n            'publishable' =\n ''\n        )\n    )\n);\n\n\n\n\nEdit the config file with the necessary data, and save it as \nconfig.php\n.", 
+            "text": "Invoices\n\n\nTo regenerate documentation, run \nmkdocs build\n. \nmkdocs\n can be installed using \n$ pip install mkdocs\n.\n\n\nConfiguration and Setup\n\n\nThere is a \nconfig.php.example\n file within the \napp\n folder, with the following contents:\n\n\n?php\n\nreturn array(\n    'database' =\n array(\n        'hostname' =\n '', // Database hostname\n        'username' =\n '', // Username\n        'password' =\n '', // Password\n        'dbname' =\n '', // Database name\n        'port' =\n '', // Port, 3306 by default\n    ),\n    'stripe' =\n array(\n        'test' =\n array(\n            'secret' =\n '', // Secret test api key\n            'publishable' =\n '' // Publishable test api key\n        ),\n        'live' =\n array(\n            'secret' =\n '',\n            'publishable' =\n ''\n        )\n    )\n);\n\n\n\n\nEdit the config file with the necessary data, and save it as \nconfig.php\n.", 
             "title": "Home"
         }, 
         {
@@ -12,7 +12,7 @@
         }, 
         {
             "location": "/#configuration-and-setup", 
-            "text": "There is a  config.php.example  file within the  app  folder, with the following contents:  ?php\n\nreturn array(\n    'database' =  array(\n        'hostname' =  '', // Database hostname\n        'username' =  '', // Username\n        'password' =  '', // Password\n        'dbname' =  '', // Database name\n        'port' =  '', // Port, 3306 by default\n    ),\n    'stripe' =  array(\n        'test' =  array(\n            'secret' =  '',\n            'publishable' =  ''\n        ),\n        'live' =  array(\n            'secret' =  '',\n            'publishable' =  ''\n        )\n    )\n);  Edit the config file with the necessary data, and save it as  config.php .", 
+            "text": "There is a  config.php.example  file within the  app  folder, with the following contents:  ?php\n\nreturn array(\n    'database' =  array(\n        'hostname' =  '', // Database hostname\n        'username' =  '', // Username\n        'password' =  '', // Password\n        'dbname' =  '', // Database name\n        'port' =  '', // Port, 3306 by default\n    ),\n    'stripe' =  array(\n        'test' =  array(\n            'secret' =  '', // Secret test api key\n            'publishable' =  '' // Publishable test api key\n        ),\n        'live' =  array(\n            'secret' =  '',\n            'publishable' =  ''\n        )\n    )\n);  Edit the config file with the necessary data, and save it as  config.php .", 
             "title": "Configuration and Setup"
         }
     ]
