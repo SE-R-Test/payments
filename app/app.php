@@ -1,6 +1,8 @@
 <?php
 
 use SteveEdson\Account\AccountManager;
+use SteveEdson\Invoice\InvoiceManager;
+use Stripe\Invoice;
 
 require __DIR__ . "/../vendor/autoload.php";
 
@@ -98,7 +100,15 @@ $app->post('/login', function() use($app) {
 })->name('login.post');
 
 $app->get('/invoices', function() use($app) {
-    $app->render('invoices.twig');
+
+    $invoice_manager = new InvoiceManager($app->container->get('db'));
+
+    $invoices = $invoice_manager->getUnpaidInvoicesForAccount($app->container->get('account')->getId());
+
+    $app->render('invoices.twig', [
+        'invoices' => $invoices
+    ]);
+
 })->name('invoices');
 
 $app->get('/invoices/:id', function($id) use($app) {
