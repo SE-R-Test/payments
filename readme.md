@@ -34,6 +34,10 @@ return array(
 
 Edit the config file with the necessary data, and save it as `config.php`.
 
+The root of the webserver should be set to the `public` dir, so that the internal PHP in the other folders is never accessible.
+
+`cd` into the `public` dir, and run `$ php -S localhost:8080` to see the site in action.
+
 ### Front end
 
 The JS and CSS is managed through [Bower](http://bower.io/). Once Bower is installed, just run `$ bower install`, to download
