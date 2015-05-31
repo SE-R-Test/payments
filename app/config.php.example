@@ -7,5 +7,15 @@ return array(
         'password' => '', // Password
         'dbname' => '', // Database name
         'port' => '', // Port, 3306 by default
+    ),
+    'stripe' => array(
+        'test' => array(
+            'secret' => '',
+            'publishable' => ''
+        ),
+        'live' => array(
+            'secret' => '',
+            'publishable' => ''
+        )
     )
 );
