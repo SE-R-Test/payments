@@ -105,9 +105,11 @@ $app->post('/login', function() use($app) {
 
 $app->get('/invoices', function() use($app) {
 
-    $invoice_manager = new InvoiceManager($app->container->get('db'));
+    $config = require __DIR__ . "/config.php";
 
-    $invoices = $invoice_manager->getUnpaidInvoicesForAccount($app->container->get('account')->getId());
+    $invoice_manager = new InvoiceManager($app->container->get('db'), $config['stripe']['test']['secret']);
+
+    $invoices = $invoice_manager->getInvoicesForAccount($app->container->get('account')->getId());
 
     $app->render('invoices.twig', [
         'invoices' => $invoices
