@@ -7,6 +7,20 @@ $app = new Slim\Slim(array(
     'templates.path' =>  __DIR__ . '/../template'
 ));
 
+$app->container->singleton('db', function($container) {
+    $config = require __DIR__ . "/config.php";
+
+    $dsn = 'mysql:host=' . $config['database']['hostname'] . ';dbname=' . $config['database']['dbname'];
+
+    if(!empty($config['database']['port'])) {
+        $dsn .= ";port=" . $config['database']['port'];
+    }
+
+    $db = new PDO($dsn, $config['database']['username'], $config['database']['password']);
+
+    return $db;
+});
+
 $view = $app->view();
 $view->parserOptions = array(
     'debug' => true,
