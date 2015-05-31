@@ -1,0 +1,23 @@
+{
+  "name": "invoices",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/SE-R-Test/payments.svg)](https://travis-ci.org/SE-R-Test/payments)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://SE-R-Test@github.com/SE-R-Test/payments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SE-R-Test/payments/issues"
+  },
+  "homepage": "https://github.com/SE-R-Test/payments"
+}

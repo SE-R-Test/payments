@@ -1,0 +1,17 @@
+<nav>
+    <div class="nav-wrapper">
+        <div class="row">
+            <div class="col s12">
+                <a href="{{ urlFor('home') }}" class="brand-logo">Invoices</a>
+            </div>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                {% if account %}
+                    <li><a href="{{ urlFor('invoices') }}">My Invoices</a></li>
+                    <li><a href="{{ urlFor('logout') }}">Log Out</a></li>
+                {% else %}
+                    <li><a href="{{ urlFor('login') }}">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

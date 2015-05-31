@@ -1,0 +1,45 @@
+{% extends '_base.twig' %}
+
+{% block head %}
+    <style type="text/css">
+        body {
+            background: url(https://download.unsplash.com/photo-1429041966141-44d228a42775);
+            background-size: cover;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col s12 center white-text">
+            <h1>Login</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s6 offset-s3 grid-example z-depth-1 white" style="padding-top: 10px;">
+
+            <form class="col s12" method="post" action="{{ urlFor('login.post') }}">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="username" type="text" class="validate" name="username">
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="password" type="text" class="validate" name="password">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 center">
+                        <button class="waves-effect waves-light btn" type="submit">Login</button>
+                    </div>
+                </div>
+            </form>
+            <div class="center row">
+                <div class="s12">
+                    {#No account? <a href="{{ urlFor('register') }}">Register now.</a>#}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

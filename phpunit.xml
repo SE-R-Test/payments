@@ -1,0 +1,11 @@
+<phpunit bootstrap="vendor/autoload.php">
+  <testsuites>
+    <testsuite name="payments">
+      <directory>test</directory>
+    </testsuite>
+  </testsuites>
+  <logging>
+    <log type="coverage-html" target="reports/coverage"/>
+    <log type="testdox-html" target="reports/tests.html"/>
+  </logging>
+</phpunit>
