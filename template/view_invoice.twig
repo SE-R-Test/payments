@@ -5,6 +5,7 @@
     <div class="row">
         <div class="col s12">
             <h1>Invoice - {{ invoice.title }}</h1>
+            <h2>£{{ invoice.amount / 100 | number_format }}</h2>
             <span>{{ invoice.status | title }}</span>
             <p>{{ invoice.description }}</p>
             <p>Issued On: {{ invoice.issue_date | date }}</p>

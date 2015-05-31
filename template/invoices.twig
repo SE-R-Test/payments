@@ -12,7 +12,7 @@
                     <span class="card-title">{{ invoice.title }}</span>
                     <span class="badge white-text {% if invoice.status == 'UNPAID' %}red{% else %}green{% endif %} lighten-1">{{ invoice.status | title }} - {{ invoice.issue_date | date }}</span>
                     <p>
-                        £{{ invoice.amount | format }}
+                        £{{ invoice.amount / 100 | number_format }}
                     </p>
                     <p>
                         {{ invoice.description }}
