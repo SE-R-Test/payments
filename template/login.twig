@@ -18,14 +18,14 @@
     <div class="row">
         <div class="col s6 offset-s3 grid-example z-depth-1 white" style="padding-top: 10px;">
 
-            <form class="col s12" method="post" action="{{ urlFor('register.post') }}">
+            <form class="col s12" method="post" action="{{ urlFor('login.post') }}">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="username" type="text" class="validate">
+                        <input id="username" type="text" class="validate" name="username">
                         <label for="username">Username</label>
                     </div>
                     <div class="input-field col s12">
-                        <input id="password" type="text" class="validate">
+                        <input id="password" type="text" class="validate" name="password">
                         <label for="password">Password</label>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
             </form>
             <div class="center row">
                 <div class="s12">
-                    No account? <a href="{{ urlFor('register') }}">Register now.</a>
+                    {#No account? <a href="{{ urlFor('register') }}">Register now.</a>#}
                 </div>
             </div>
         </div>
