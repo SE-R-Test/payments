@@ -44,7 +44,8 @@ The JS and CSS is managed through [Bower](http://bower.io/). Once Bower is insta
 ## TODO
 
 - [x] Complete spec features
-- [ ] Write documentation
+- [x] Write documentation
+- [ ] Improve documentation
 - [ ] Write unit tests
 - [ ] Allow users to register
 - [ ] Add validation to forms
