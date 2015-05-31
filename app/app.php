@@ -49,7 +49,10 @@ $view->parserExtensions = array(
 );
 
 $view->appendData(array(
-    'account' => $app->container->get('account')
+    'account' => $app->container->get('account'),
+    'stripe' => array(
+        'publishable' => $config['stripe']['test']['publishable']
+    )
 ));
 
 $app->get('/', function() use($app) {
