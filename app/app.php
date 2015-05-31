@@ -119,6 +119,16 @@ $app->get('/invoices', function() use($app) {
 
 $app->get('/invoices/:id', function($id) use($app) {
 
+    $config = require __DIR__ . "/config.php";
+
+    $invoice_manager = new InvoiceManager($app->container->get('db'), $config['stripe']['test']['secret']);
+
+    $invoice = $invoice_manager->getUserInvoice($app->container->get('account')->getId(), $id);
+
+    $app->render('view_invoice.twig', [
+        'invoice' => $invoice
+    ]);
+
 })->name('invoices.view');
 
 $app->get('/logout', function() use($app) {
