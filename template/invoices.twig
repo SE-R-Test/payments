@@ -2,6 +2,34 @@
 
 {% block content %}
 
-<h1>Invoices</h1>
+    <h1>Invoices</h1>
+
+    <div class="row">
+
+    {% for invoice in invoices %}
+
+        <div class="col s12 m6">
+            <div class="card {% if invoice.status == 'UNPAID' %}red{% else %}green{% endif %} darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">{{ invoice.title }}</span>
+                    <span class="badge white-text red lighten-1">{{ invoice.status | title }} - {{ invoice.issue_date | date }}</span>
+                    <p>
+                        {{ invoice.description }}
+                    </p>
+                </div>
+                {% if invoice.status == 'UNPAID' %}
+                <div class="card-action">
+                    <a href="#">Pay Invoice</a>
+                </div>
+                {% else %}
+                <div class="card-action">
+                    <a href="#">Download Invoice</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
 
 {% endblock %}
