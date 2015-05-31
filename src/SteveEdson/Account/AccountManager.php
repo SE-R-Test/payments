@@ -38,6 +38,28 @@ class AccountManager {
         }
     }
 
+    public function loadAccount($id) {
+
+        $statement = $this->db->prepare("SELECT * FROM account WHERE id = :id LIMIT 1");
+
+        $result = $statement->execute([
+            "id" => $id
+        ]);
+
+        if($result && $statement->rowCount() == 1) {
+
+            /**
+             * @var Account $account
+             */
+            $account = $statement->fetchObject('SteveEdson\Account\Account');
+
+            return $account ?: false;
+
+        } else {
+            return false;
+        }
+    }
+
     /**
      * @param $password
      * @return bool|string
