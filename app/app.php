@@ -68,14 +68,6 @@ $app->get('/', function() use($app) {
 
 })->name('home');
 
-//$app->get('/register', function() use($app) {
-//    $app->render('register.twig');
-//})->name('register');
-//
-//$app->post('/register', function() use($app) {
-//    print_r($app->request());
-//})->name('register.post');
-
 $app->get('/login', function() use($app) {
     $app->render('login.twig');
 })->name('login');
